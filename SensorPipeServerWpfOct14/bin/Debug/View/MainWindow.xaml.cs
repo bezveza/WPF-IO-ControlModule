@@ -149,6 +149,7 @@ namespace SensorPipeServerWpfOct14
             await SensorPipeServer.PipeServerAsync(led, LedArray);
         }
 
+        //Help menu event handler
         private void MenuItem_Click(object sender, RoutedEventArgs e)
         {
             var ab = new HelpAboutWindow("About Test App", "This is an Input/Output simulation tool used for digital control systems. This is a work in progress.");
