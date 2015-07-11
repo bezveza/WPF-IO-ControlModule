@@ -22,8 +22,9 @@ namespace SensorPipeServerWpfOct14
         {
             InitializeComponent();
         }
-        
-        private void Window_Loaded(object sender, RoutedEventArgs e) //event registered in mainwindow.xaml
+
+        //event registered in mainwindow.xaml
+        private void Window_Loaded(object sender, RoutedEventArgs e) 
         {
             try
             {
@@ -148,7 +149,10 @@ namespace SensorPipeServerWpfOct14
             await SensorPipeServer.PipeServerAsync(led, LedArray);
         }
 
-       
+        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            var ab = new HelpAboutWindow("About Test App", "This is an Input/Output simulation tool used for digital control systems. This is a work in progress.");
+        }
     }
 }
 

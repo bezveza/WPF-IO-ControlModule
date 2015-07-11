@@ -7,7 +7,10 @@
         <!-- future menu controls -->
         <Menu Height="22" VerticalAlignment="Top" Background="{x:Null}">
             <MenuItem Header="Settings"/>
-            <MenuItem Header="Help"/>
+            <MenuItem Header="Help" Click="MenuItem_Click" >
+                <MenuItem Header="About TestApp" HorizontalAlignment="Left" Width="auto" />
+            </MenuItem>
+            
         </Menu>
 
         <TabControl Margin="0,24,0,0">

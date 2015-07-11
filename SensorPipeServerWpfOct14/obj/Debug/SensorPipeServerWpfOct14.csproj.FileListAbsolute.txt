@@ -146,3 +146,5 @@ C:\Users\Sam15\Desktop\GitHub\SensorPipeServerWpfOct14\SensorPipeServerWpfOct14\
 C:\Users\Sam15\Desktop\GitHub\SensorPipeServerWpfOct14\SensorPipeServerWpfOct14\obj\Debug\SensorPipeServerWpfOct14.csproj.GenerateResource.Cache
 C:\Users\Sam15\Desktop\GitHub\SensorPipeServerWpfOct14\SensorPipeServerWpfOct14\obj\Debug\SensorPipeServerWpfOct14.exe.manifest
 C:\Users\Sam15\Desktop\GitHub\SensorPipeServerWpfOct14\SensorPipeServerWpfOct14\obj\Debug\SensorPipeServerWpfOct14.application
+C:\Users\Sam15\Desktop\GitHub\SensorPipeServerWpfOct14\SensorPipeServerWpfOct14\obj\Debug\Model\HelpAboutWindow.baml
+C:\Users\Sam15\Desktop\GitHub\SensorPipeServerWpfOct14\SensorPipeServerWpfOct14\obj\Debug\Model\HelpAboutWindow.g.cs
