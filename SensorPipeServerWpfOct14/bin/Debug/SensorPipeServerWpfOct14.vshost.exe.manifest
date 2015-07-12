@@ -49,19 +49,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>uuYFEWEB+rsBMQckbROjxDnN8DWny5ia8fIGqVrn8Xk=</dsig:DigestValue>
-      </hash>
-    </dependentAssembly>
-  </dependency>
-  <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="StandardEventLib.dll" size="6144">
-      <assemblyIdentity name="StandardEventLib" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
-      <hash>
-        <dsig:Transforms>
-          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-        </dsig:Transforms>
-        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>FBYKI690bW+54TayVqVhOsOFloxWnPMEuGoteqnDz6c=</dsig:DigestValue>
+        <dsig:DigestValue>YsOm/4lcwZcTr/1Waw2hFwVlmagA7qKqlrOMKeXqhg8=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
