@@ -50,10 +50,8 @@ namespace SensorPipeServerWpfOct14
                 });
 
                 if (error != null) { Data.Source.Msg(error); }
-
                 input = LedModule.ledControl(N, LedArray).ToString();
                 debugInfo(N, sN, input);
-              
             }
 
             done = false;

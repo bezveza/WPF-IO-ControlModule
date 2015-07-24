@@ -2,7 +2,7 @@
 namespace SensorPipeServerWpfOct14
 {
    //class module for led on/off state
-    public class LedModule
+   public class LedModule
    {
        public static int ledControl(int n, Led [] LedArray)
        {

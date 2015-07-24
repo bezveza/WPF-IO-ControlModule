@@ -17,6 +17,7 @@ namespace SensorPipeServerWpfOct14
         Ellipse[] led = new Ellipse[8];
         Led[] LedArray = new Led[8];
         string m { get; set; }
+        HelpAboutWindow ab = null;
         
         public MainWindow()
         {
@@ -34,9 +35,7 @@ namespace SensorPipeServerWpfOct14
             {
                 Data.Source.Msg("Error : " + ex.Message);
             }
-
             statBar.Content = "Ready";
-                       
         }
         
         private void display_TextChanged(object sender, TextChangedEventArgs e) //event registered in mainwindow.xaml
@@ -83,7 +82,7 @@ namespace SensorPipeServerWpfOct14
         {
             LedArray[6].disableLED(0);
         }
-        //main sensor panel manual button
+        //main sensor panel manual control button
         private void ManualBtn_Click(object sender, RoutedEventArgs e)
         {
             var inputLed = InputLedTxtBox.Text;
@@ -94,14 +93,11 @@ namespace SensorPipeServerWpfOct14
                 num = int.Parse(inputLed);
                 if ( num < 1 || num > 12) { InputLedTxtBox.Text = errorMsg; }
             }
-            
             catch //catch all inputs that are not integer
             {
                 InputLedTxtBox.Text = errorMsg;
             }
-
             LedModule.ledControl(num, LedArray);
-            
         }
         //main sensor panel random led on/off trigger
         private async void RandomBtn_Click(object sender, RoutedEventArgs e)
@@ -134,7 +130,6 @@ namespace SensorPipeServerWpfOct14
             display.VerticalScrollBarVisibility = ScrollBarVisibility.Auto;
             display.IsReadOnly = true;
 
-
             led[1] = led1; led[2] = led2; led[3] = led3; led[4] = led4; led[5] = led5; led[6] = led6; led[7] = ledServer;
 
             LedArray[1] = Led1 = new Led(led1, inTxt1, btn1);
@@ -149,11 +144,46 @@ namespace SensorPipeServerWpfOct14
             await SensorPipeServer.PipeServerAsync(led, LedArray);
         }
 
-        //Help menu event handler
-        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        //help menu event handler
+        private void Help_Menu_Click(object sender, RoutedEventArgs e)
         {
-            var ab = new HelpAboutWindow("About Test App", "This is an Input/Output simulation tool used for digital control systems. This is a work in progress.");
+            ab = new HelpAboutWindow("About SensorPipeServer App", "This is a simple Input/Output simulation tool. \n\nThis is a work in progress. \n\n-Ed Alegrid");
         }
+        //settings/exit event handler
+        private void Settings_Menu_Click(object sender, RoutedEventArgs e)
+        {
+            Exit();
+        }
+
+        private void Window_Unloaded(object sender, RoutedEventArgs e)
+        {
+            Exit();
+        }
+        //exit method
+        void Exit()
+        {
+            if (ab != null)
+            {
+                try
+                {
+                    ab.Close();
+                    this.Close();
+                }
+
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+            else
+            {
+                this.Close();
+                //close other objects as well
+            }
+               
+
+        }
+
     }
 }
 

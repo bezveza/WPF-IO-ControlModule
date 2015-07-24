@@ -17,7 +17,6 @@ namespace SensorPipeServerWpfOct14
         Button btn = null;
         //Label ledlbl = null;
 
-
         public Led(Ellipse led, TextBox inTxt, Button btn /*, Label ledlbl*/)
         {
             ledON = new SolidColorBrush();
