@@ -8,6 +8,7 @@ namespace SensorPipeServerWpfOct14.Model
     /// </summary>
     public partial class HelpAboutWindow : Window
     {
+
         public HelpAboutWindow(string t, string s)
         {
             InitializeComponent();
@@ -19,22 +20,15 @@ namespace SensorPipeServerWpfOct14.Model
             this.Show();
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
             try
             {
-                //attempt to close the Window 
                 this.Close();
-                // if (MainWindow.cs != null)
-                // MainWindow.cs.Close();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-            }
-            finally
-            {
-                this.Close();
             }
         }
     }
