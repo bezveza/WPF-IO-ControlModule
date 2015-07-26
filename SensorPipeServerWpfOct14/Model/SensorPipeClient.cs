@@ -19,16 +19,17 @@ namespace SensorPipeServerWpfOct14
                 {
                     using (p = new NamedPipeClientStream("sensorPipe"))
                     {
-                        Data.Source.Msg("\nClient connected ...");
+                        //Data.Source.Msg("\nClient connected ...");
                         await Task.Run(() =>
                         {
                             ClientPipeProcess(m, p);
                         });
 
-                        Data.Source.Msg("\nClient Rx data: " + m);
-                        Data.Source.Msg("\n***** Debug End Ouput ******");
+                        //Data.Source.Msg("\nClient Rx data: " + m);
+                        //Data.Source.Msg("\n***** Debug End Ouput ******");
+                        //Data.Source.Msg("\nClient disconnected ...");
                     }
-                    Data.Source.Msg("\nClient disconnected ...");
+                   
                 }
                 catch (Exception e)
                 {

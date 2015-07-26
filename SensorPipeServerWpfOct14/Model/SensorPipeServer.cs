@@ -8,39 +8,36 @@ using System.Windows.Shapes;
 
 namespace SensorPipeServerWpfOct14
 {
-    //server class accesible by an independent control module application 
+    /* The pipe server here is performing two services.
+       The first service is generating a random number for any client connection.
+       The second service is controlling the internal LED visual display according to the random number generated. */
+
     public class SensorPipeServer
     {
-        string m { get; set; }
         static bool done { get; set; }
-        static string sN, input;
-        static int N;
-
-        static Color ColorON = Color.FromArgb(255, 255, 255, 0); //Yellow
-        static Color ColorOFF = Color.FromArgb(100, 171, 153, 153); //Gray
 
         public static async Task PipeServerAsync(Ellipse[] led, Led[] LedArray)
         {
-            SolidColorBrush ledON  = new SolidColorBrush(ColorON);
-            SolidColorBrush ledOFF = new SolidColorBrush(ColorOFF);
-            
-            await led[7].Dispatcher.InvokeAsync(new Action(() =>  led[7].Fill = ledON ));  //led[7] = ledServer
             Data.Source.Msg("\nSensorServer started ...");
-            
+            LedArray[7].switchLED(1); //direct way to turn on using input 1 
+            //LedModule.ledControl(13, LedArray); //using pattern to turn on. Either way works fine.
+
+           //a quick startup test to check the condition of the Led's
+           await StartUpPattern.startupCheckAsync4(LedArray);
+           await StartUpPattern.startupCheckAsync3(LedArray);
+
             while (!done)
             {
-                //random no. generator, int and string output for debug, window display 
-                N = new System.Random().Next(13);
-                sN = N.ToString();
-                input = sN;
-
+                //internal random number generator
+                int n = new System.Random().Next(13);
                 string error = null;
-
+                
                 await Task.Run(() =>
                 {
                     try
                     {
-                        PipeProcess(N, sN, input); //also need to consider pipeName
+                        //calling 1st service method for pipe connection 
+                        PipeProcessAsync(n); 
                     }
                     catch (Exception e)
                     {
@@ -48,34 +45,44 @@ namespace SensorPipeServerWpfOct14
                         error = "\nError from server:" + e.Message + "\nServer is stopped!";
                     }
                 });
+              
+                //calling 2nd service method for internal visual control
+                visualLedModuleControlAsync(n, led, LedArray);
 
                 if (error != null) { Data.Source.Msg(error); }
-                input = LedModule.ledControl(N, LedArray).ToString();
-                debugInfo(N, sN, input);
+                debugInfo(n);
             }
-
             done = false;
-            await led[7].Dispatcher.InvokeAsync(new Action(() => led[7].Fill = ledOFF)); //ledServer.Fill = ledOFF;
+            LedArray[7].switchLED(1);
             Data.Source.Msg("\nServer is stopped!");
         }
 
-        private static void PipeProcess(int N, string sN, string input)
+        //1st service
+        //method to send the random numbers to pipe client 
+        private static void PipeProcessAsync(int n)
         {
             using (var s = new NamedPipeServerStream("sensorPipe", PipeDirection.InOut, 1, PipeTransmissionMode.Message))
             {
+                string sN = n.ToString();
                 //output section
                 s.WaitForConnection();
-                byte[] msg = Encoding.UTF8.GetBytes(input); //input will generate random message
-                s.Write(msg, 0, msg.Length);  //send data
+                byte[] msg = Encoding.UTF8.GetBytes(sN); //input will generate random message
+                s.Write(msg, 0, msg.Length);  //send data to client
             }
         }
 
-        private static void debugInfo(int N, string sN, string input/*, TextBox[] inTxt*/)
+        //2nd service
+        //method for internal visual display control
+        private static void visualLedModuleControlAsync(int n, Ellipse[] led , Led[] LedArray)
         {
-            Data.Source.Msg("\n***** Debug Start Ouput ******");
-            Data.Source.Msg("\nRandomNo = " + sN);
-            Data.Source.Msg("\nServer Tx data (string) = " + input);
+            LedModule.ledControl(n, LedArray);
         }
-
+        
+        //method for debug display 
+        private static void debugInfo(int n)
+        {
+            //Data.Source.Msg("\n***** Debug Start Ouput ******");
+            Data.Source.Msg("\nSent random n = " + n);
+        }
     }
 }

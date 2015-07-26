@@ -29,6 +29,7 @@ namespace SensorPipeServerWpfOct14.Model
 
         public void Msg(string data)
         {
+            
             if (initFlag == false)
                 eventAlert();
             if (Source != null)
@@ -44,7 +45,7 @@ namespace SensorPipeServerWpfOct14.Model
             }
         }
     }
-
+    //for event subscriber
     public class EventUser
     {
         private TextBox textbox;
