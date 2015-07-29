@@ -5,10 +5,8 @@ C:\Users\Sam15\Desktop\GitHub\SensorPipeServerWpfOct14\SensorPipeServerWpfOct14\
 C:\Users\Sam15\Desktop\GitHub\SensorPipeServerWpfOct14\SensorPipeServerWpfOct14\bin\Debug\SensorPipeServerWpfOct14.exe
 C:\Users\Sam15\Desktop\GitHub\SensorPipeServerWpfOct14\SensorPipeServerWpfOct14\bin\Debug\SensorPipeServerWpfOct14.pdb
 C:\Users\Sam15\Desktop\GitHub\SensorPipeServerWpfOct14\SensorPipeServerWpfOct14\obj\Debug\SensorPipeServerWpfOct14.csprojResolveAssemblyReference.cache
-C:\Users\Sam15\Desktop\GitHub\SensorPipeServerWpfOct14\SensorPipeServerWpfOct14\obj\Debug\Model\HelpAboutWindow.baml
 C:\Users\Sam15\Desktop\GitHub\SensorPipeServerWpfOct14\SensorPipeServerWpfOct14\obj\Debug\View\MainWindow.baml
 C:\Users\Sam15\Desktop\GitHub\SensorPipeServerWpfOct14\SensorPipeServerWpfOct14\obj\Debug\App.baml
-C:\Users\Sam15\Desktop\GitHub\SensorPipeServerWpfOct14\SensorPipeServerWpfOct14\obj\Debug\Model\HelpAboutWindow.g.cs
 C:\Users\Sam15\Desktop\GitHub\SensorPipeServerWpfOct14\SensorPipeServerWpfOct14\obj\Debug\View\MainWindow.g.cs
 C:\Users\Sam15\Desktop\GitHub\SensorPipeServerWpfOct14\SensorPipeServerWpfOct14\obj\Debug\App.g.cs
 C:\Users\Sam15\Desktop\GitHub\SensorPipeServerWpfOct14\SensorPipeServerWpfOct14\obj\Debug\SensorPipeServerWpfOct14_MarkupCompile.cache
@@ -19,3 +17,5 @@ C:\Users\Sam15\Desktop\GitHub\SensorPipeServerWpfOct14\SensorPipeServerWpfOct14\
 C:\Users\Sam15\Desktop\GitHub\SensorPipeServerWpfOct14\SensorPipeServerWpfOct14\obj\Debug\SensorPipeServerWpfOct14.application
 C:\Users\Sam15\Desktop\GitHub\SensorPipeServerWpfOct14\SensorPipeServerWpfOct14\obj\Debug\SensorPipeServerWpfOct14.exe
 C:\Users\Sam15\Desktop\GitHub\SensorPipeServerWpfOct14\SensorPipeServerWpfOct14\obj\Debug\SensorPipeServerWpfOct14.pdb
+C:\Users\Sam15\Desktop\GitHub\SensorPipeServerWpfOct14\SensorPipeServerWpfOct14\obj\Debug\lib\HelpAboutWindow.baml
+C:\Users\Sam15\Desktop\GitHub\SensorPipeServerWpfOct14\SensorPipeServerWpfOct14\obj\Debug\lib\HelpAboutWindow.g.cs

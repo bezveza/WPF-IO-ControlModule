@@ -81,7 +81,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="Model\HelpAboutWindow.xaml">
+    <Page Include="lib\HelpAboutWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -93,12 +93,13 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Model\DataEvent.cs" />
-    <Compile Include="Model\HelpAboutWindow.xaml.cs">
+    <Compile Include="lib\DataEvent.cs" />
+    <Compile Include="lib\HelpAboutWindow.xaml.cs">
       <DependentUpon>HelpAboutWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Model\SensorPipeClient.cs" />
-    <Compile Include="Model\Led.cs" />
+    <Compile Include="lib\SensorPipeClient.cs" />
+    <Compile Include="lib\Led.cs" />
+    <Compile Include="lib\StartUpPattern.cs" />
     <Compile Include="View\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -106,8 +107,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Model\LedModule.cs" />
-    <Compile Include="Model\SensorPipeServer.cs" />
+    <Compile Include="lib\LedModule.cs" />
+    <Compile Include="lib\SensorPipeServer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>

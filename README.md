@@ -1,7 +1,13 @@
-# Digital-Input-Module-Simulator
-A simple digital input simulator which can be used for DAQ systems, I/O control, simulation etc.
-Originally developed as Arduino logic simulator. It works as a client/server application with a separate control module.
-The modules consist of input, output and control module. It is using named pipes for the modules to communicate with each other.
-Initially using just random numbers to simulate an input sensor behavior but later planned to integrate an I/O board for fixture hardware control. The project is based on WPF using C#.
+# Digital-Input-Module-
 
-Thanks.
+A simple simulator which can be used as a digital logic exerciser, I/O control sequencer, visual indicator for remote monitoring and a lot more.
+
+Originally developed as Arduino logic simulator, it works as a client/server application using named pipes for interfacing.
+
+The code behind can be easily modified to hook up a driver wrapper to control a real device, instrument or any gadget of your choice.
+
+Currently I am developing a control module to interface with it together with the Digital-Output module.
+ 
+
+Thanks
+-Ed

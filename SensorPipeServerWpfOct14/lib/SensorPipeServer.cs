@@ -9,6 +9,7 @@ namespace SensorPipeServerWpfOct14
 
     /******************************************************************
     * The pipe server here is performing two services.
+    *
     * The first service is generating a random number during client connection.
     * The second service is controlling the internal LED visual display
     * according to the random number generated. 
@@ -25,8 +26,8 @@ namespace SensorPipeServerWpfOct14
             //LedModule.ledControl(13, LedArray); //using pattern to turn on. Either way works fine.
 
            //a quick startup test to check the condition of the Led's
-           await StartUpPattern.startupCheckAsync4(LedArray);
-           await StartUpPattern.startupCheckAsync3(LedArray);
+           //await StartUpPattern.startupCheckAsync4(LedArray);
+           //await StartUpPattern.startupCheckAsync3(LedArray);
 
             while (!done)
             {

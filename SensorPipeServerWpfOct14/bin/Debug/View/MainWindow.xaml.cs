@@ -1,6 +1,5 @@
 ﻿using SensorPipeServerWpfOct14.Model;
 using System;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Shapes;
@@ -12,12 +11,12 @@ namespace SensorPipeServerWpfOct14
     /// </summary>
     public partial class MainWindow : Window
     {
-        Led Led1, Led2, Led3, Led4, Led5, Led6 = null;
+        Led Led1, Led2, Led3, Led4, Led5, Led6, Led7 = null;
         TextBox[] inTxt = new TextBox[8];
         Ellipse[] led = new Ellipse[8];
         Led[] LedArray = new Led[8];
-        string m { get; set; }
-        HelpAboutWindow ab = null;
+        string n { get; set; }
+        HelpAboutWindow about = null;
         
         public MainWindow()
         {
@@ -27,18 +26,11 @@ namespace SensorPipeServerWpfOct14
         //event registered in mainwindow.xaml
         private void Window_Loaded(object sender, RoutedEventArgs e) 
         {
-            try
-            {
-                initProcess();
-            }
-            catch (Exception ex)
-            {
-                Data.Source.Msg("Error : " + ex.Message);
-            }
-            statBar.Content = "Ready";
+            initProcess();
         }
         
-        private void display_TextChanged(object sender, TextChangedEventArgs e) //event registered in mainwindow.xaml
+        //debug display autoscroll
+        private void display_TextChanged(object sender, TextChangedEventArgs e)
         {
             display.ScrollToEnd();
         }
@@ -50,8 +42,10 @@ namespace SensorPipeServerWpfOct14
         //debug mode panel manual on/off trigger
         private async  void clientButton_Click(object sender, RoutedEventArgs e)
         {
-            await SensorPipeClient.PipeClientAsync(m);
+          
+            await SensorPipeClient.PipeClientAsync(n);
         }
+
         //disable button for each led module 1 to 6
         private void btn1_Click(object sender, RoutedEventArgs e)
         {
@@ -65,7 +59,7 @@ namespace SensorPipeServerWpfOct14
 
         private void btn3_Click(object sender, RoutedEventArgs e)
         {
-             LedArray[3].disableLED(0);
+            LedArray[3].disableLED(0);
         }
 
         private void btn4_Click(object sender, RoutedEventArgs e)
@@ -75,13 +69,14 @@ namespace SensorPipeServerWpfOct14
 
         private void btn5_Click(object sender, RoutedEventArgs e)
         {
-             LedArray[5].disableLED(0);
+            LedArray[5].disableLED(0);
         }
 
         private void btn6_Click(object sender, RoutedEventArgs e)
         {
             LedArray[6].disableLED(0);
         }
+
         //main sensor panel manual control button
         private void ManualBtn_Click(object sender, RoutedEventArgs e)
         {
@@ -99,10 +94,11 @@ namespace SensorPipeServerWpfOct14
             }
             LedModule.ledControl(num, LedArray);
         }
+
         //main sensor panel random led on/off trigger
         private async void RandomBtn_Click(object sender, RoutedEventArgs e)
         {
-            await SensorPipeClient.PipeClientAsync(m);
+            await SensorPipeClient.PipeClientAsync(n);
         }
         //main sensor panel "manual input" expander textbox focus event
         private void InputLedTxtBox_GotFocus(object sender, RoutedEventArgs e)
@@ -118,13 +114,14 @@ namespace SensorPipeServerWpfOct14
         //initialization, object element creation, prop settings, etc.
         private async void initProcess()
         {
-            //register event textbox display
+            //register debug textbox display event. Using event instead of databinding 
             EventUser eventMsg = new EventUser(display);
             //Expander Manual Input TextBox
             InputLedTxtBox.HorizontalContentAlignment = HorizontalAlignment.Center;
             //Debug Mode Panel
             CtrlPtrnTxtBox.Text = "Led1     ON = 1,   OFF = 2" + "            Led5     ON = 9,    OFF = 10\n" + "Led2     ON = 3,   OFF = 4" + "            Led4     ON = 7,    OFF = 8\n" +
-                                  "Led3     ON = 5,   OFF = 6" + "            Led6     ON = 11,  OFF = 12\n";
+                                  "Led3     ON = 5,   OFF = 6" + "            Led6     ON = 11,  OFF = 12\n" +
+                                  "\nUse odd numbers to turn ON any led.    Use even numbers to turn OFF.";
 
             display.HorizontalScrollBarVisibility = ScrollBarVisibility.Auto;
             display.VerticalScrollBarVisibility = ScrollBarVisibility.Auto;
@@ -138,18 +135,29 @@ namespace SensorPipeServerWpfOct14
             LedArray[4] = Led4 = new Led(led4, inTxt4, btn4);
             LedArray[5] = Led5 = new Led(led5, inTxt5, btn5);
             LedArray[6] = Led6 = new Led(led6, inTxt6, btn6);
+           // LedArray[7] = Led7 = new Led(ledServer, null, null); //for debug only
+            LedArray[7] = Led7 = new Led(ledServer, inTxt1, btn1); //shared textbox output with led1 
 
             serverButton.IsEnabled = false;
-
-            await SensorPipeServer.PipeServerAsync(led, LedArray);
+        
+            try
+            {
+                await StartUpPattern.startupCheckAsync4(LedArray);
+                await StartUpPattern.startupCheckAsync3(LedArray);
+                await SensorPipeServer.PipeServerAsync(LedArray);
+            }
+            catch (Exception ex)
+            {
+                statBar.Content = "Not Ready. There seems to be an error during startup.";
+                MessageBox.Show(ex.Message, "ERROR!!!");
+            }
         }
 
-        //help menu event handler
         private void Help_Menu_Click(object sender, RoutedEventArgs e)
         {
-            ab = new HelpAboutWindow("About SensorPipeServer App", "This is a simple Input/Output simulation tool. \n\nThis is a work in progress. \n\n-Ed Alegrid");
+            about = new HelpAboutWindow("About SensorPipeServer App", "This is a simple Input/Output simulation tool. \n\nThis is a work in progress. \n\n-Ed Alegrid");
         }
-        //settings/exit event handler
+ 
         private void Settings_Menu_Click(object sender, RoutedEventArgs e)
         {
             Exit();
@@ -159,31 +167,10 @@ namespace SensorPipeServerWpfOct14
         {
             Exit();
         }
-        //exit method
         void Exit()
         {
-            if (ab != null)
-            {
-                try
-                {
-                    ab.Close();
-                    this.Close();
-                }
-
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
-            }
-            else
-            {
-                this.Close();
-                //close other objects as well
-            }
-               
-
+            Application.Current.Shutdown();
         }
-
     }
 }
 

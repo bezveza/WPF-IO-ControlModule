@@ -49,7 +49,7 @@ namespace SensorPipeServerWpfOct14.Model
     public class EventUser
     {
         private TextBox textbox;
-
+        
         public EventUser(TextBox textbox)
         {
             this.textbox = textbox;
