@@ -29,7 +29,7 @@ namespace SensorPipeServerWpfOct14.Model
             await Task.Delay(250);
             LedArray[7].switchLED(1);
         }
-        //pattrn 2
+        //pattern 2
         public static async Task startupCheckAsync2(Led[] LedArray)
         {
              //turning led on from Led1 to Led7
