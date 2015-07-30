@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 
 namespace SensorPipeServerWpfOct14
 {
-
     /******************************************************************
     * The pipe server here is performing two services.
     *
