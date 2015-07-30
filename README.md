@@ -1,4 +1,4 @@
-# Digital-Input-Module-
+# Digital-Input-Control-Module
 
 A simple simulator which can be used as a digital logic exerciser, I/O control sequencer, visual indicator for remote monitoring and a lot more.
 
