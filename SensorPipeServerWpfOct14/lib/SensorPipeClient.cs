@@ -1,4 +1,5 @@
-﻿using SensorPipeServerWpfOct14.Model;
+﻿using DataSourceEventLib;
+using SensorPipeServerWpfOct14.Model;
 using System;
 using System.IO;
 using System.IO.Pipes;

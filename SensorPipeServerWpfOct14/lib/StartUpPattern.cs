@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using LedSystemLib;
+using System.Threading.Tasks;
 
 namespace SensorPipeServerWpfOct14.Model
 {

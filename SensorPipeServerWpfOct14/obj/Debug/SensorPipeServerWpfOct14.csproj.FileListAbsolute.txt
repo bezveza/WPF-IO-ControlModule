@@ -19,3 +19,7 @@ C:\Users\Sam15\Desktop\GitHub\SensorPipeServerWpfOct14\SensorPipeServerWpfOct14\
 C:\Users\Sam15\Desktop\GitHub\SensorPipeServerWpfOct14\SensorPipeServerWpfOct14\obj\Debug\SensorPipeServerWpfOct14.pdb
 C:\Users\Sam15\Desktop\GitHub\SensorPipeServerWpfOct14\SensorPipeServerWpfOct14\obj\Debug\lib\HelpAboutWindow.baml
 C:\Users\Sam15\Desktop\GitHub\SensorPipeServerWpfOct14\SensorPipeServerWpfOct14\obj\Debug\lib\HelpAboutWindow.g.cs
+C:\Users\Sam15\Desktop\GitHub\SensorPipeServerWpfOct14\SensorPipeServerWpfOct14\bin\Debug\DataSourceEventLib.dll
+C:\Users\Sam15\Desktop\GitHub\SensorPipeServerWpfOct14\SensorPipeServerWpfOct14\bin\Debug\LedSystemLib.dll
+C:\Users\Sam15\Desktop\GitHub\SensorPipeServerWpfOct14\SensorPipeServerWpfOct14\bin\Debug\DataSourceEventLib.pdb
+C:\Users\Sam15\Desktop\GitHub\SensorPipeServerWpfOct14\SensorPipeServerWpfOct14\bin\Debug\LedSystemLib.pdb

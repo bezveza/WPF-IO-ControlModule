@@ -1,4 +1,6 @@
-﻿using SensorPipeServerWpfOct14.Model;
+﻿using DataSourceEventLib;
+using LedSystemLib;
+using SensorPipeServerWpfOct14.Model;
 using System;
 using System.Windows;
 using System.Windows.Controls;
@@ -142,8 +144,8 @@ namespace SensorPipeServerWpfOct14
         
             try
             {
-                await StartUpPattern.startupCheckAsync4(LedArray);
-                await StartUpPattern.startupCheckAsync3(LedArray);
+                //await StartUpPattern.startupCheckAsync4(LedArray);
+                //await StartUpPattern.startupCheckAsync3(LedArray);
                 await SensorPipeServer.PipeServerAsync(LedArray);
             }
             catch (Exception ex)

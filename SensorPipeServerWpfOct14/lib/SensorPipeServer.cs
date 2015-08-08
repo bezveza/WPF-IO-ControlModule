@@ -1,4 +1,6 @@
-﻿using SensorPipeServerWpfOct14.Model;
+﻿using DataSourceEventLib;
+using LedSystemLib;
+using SensorPipeServerWpfOct14.Model;
 using System;
 using System.IO.Pipes;
 using System.Text;
@@ -25,8 +27,8 @@ namespace SensorPipeServerWpfOct14
             //LedModule.ledControl(13, LedArray); //using pattern to turn on. Either way works fine.
 
            //a quick startup test to check the condition of the Led's
-           //await StartUpPattern.startupCheckAsync4(LedArray);
-           //await StartUpPattern.startupCheckAsync3(LedArray);
+           await StartUpPattern.startupCheckAsync4(LedArray);
+           await StartUpPattern.startupCheckAsync3(LedArray);
 
             while (!done)
             {

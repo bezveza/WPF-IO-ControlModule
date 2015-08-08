@@ -65,6 +65,12 @@
     <ApplicationIcon>test-icon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DataSourceEventLib">
+      <HintPath>..\DataSourceEventLib\bin\Debug\DataSourceEventLib.dll</HintPath>
+    </Reference>
+    <Reference Include="LedSystemLib">
+      <HintPath>..\LedSystemLib\bin\Debug\LedSystemLib.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
@@ -96,12 +102,10 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="lib\DataEvent.cs" />
     <Compile Include="lib\HelpAboutWindow.xaml.cs">
       <DependentUpon>HelpAboutWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="lib\SensorPipeClient.cs" />
-    <Compile Include="lib\Led.cs" />
     <Compile Include="lib\StartUpPattern.cs" />
     <Compile Include="View\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>

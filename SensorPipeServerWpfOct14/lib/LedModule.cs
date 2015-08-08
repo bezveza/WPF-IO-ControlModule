@@ -1,4 +1,4 @@
-﻿
+﻿using LedSystemLib;
 namespace SensorPipeServerWpfOct14
 {
    //class module to control the led according to a certain pattern

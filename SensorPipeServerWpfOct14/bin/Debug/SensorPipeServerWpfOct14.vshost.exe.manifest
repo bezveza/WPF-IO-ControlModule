@@ -43,14 +43,38 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SensorPipeServerWpfOct14.exe" size="262080">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DataSourceEventLib.dll" size="6144">
+      <assemblyIdentity name="DataSourceEventLib" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>Gjj2SMmQXjrhRMdI3IyrkRVf4RFW4kG2u2iM5wybs/8=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="LedSystemLib.dll" size="5632">
+      <assemblyIdentity name="LedSystemLib" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>Fup28YIiBhF5aYSazj43pE4fFQ9YTHdHcmJhzxutmvg=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SensorPipeServerWpfOct14.exe" size="260544">
       <assemblyIdentity name="SensorPipeServerWpfOct14" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>29bxOXGUGiIkX5kNGFe1I4iA9NLC+MOB84VBk4NZ1vI=</dsig:DigestValue>
+        <dsig:DigestValue>LOX4Oo2VFXaAi4HSKPPp3QTmrYdQBHtGA9MBH2huat4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
