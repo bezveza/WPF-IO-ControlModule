@@ -6,8 +6,4 @@ Originally developed as Arduino logic simulator, it works as a client/server app
 
 The code behind can be easily modified to hook up a driver wrapper to control a real device, instrument or any gadget of your choice.
 
-Currently I am developing a control module to interface with it together with the Digital-Output module.
- 
-
-Thanks
 
