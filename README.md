@@ -6,5 +6,6 @@ Originally developed as Arduino logic simulator, it works as a client/server app
 
 The code behind is modular enough for additional external libraries to control real devices, instruments or any gadgets from your personal projects.
 
+Check the link here for details.
 
-
+https://github.com/EdoLabWorks/IO-ControlModule/wiki
