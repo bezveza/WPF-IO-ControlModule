@@ -11,7 +11,7 @@ The code behind is modular enough for additional external libraries to control r
 
 A quick overview of how we can control the input module is shown below.
 
-![](https://github.com/EdoLabWorks/xedo-imgs/blob/master/IOModuleOverview.png)
+![](https://github.com/EdoLabWorks/xedo-imgs/blob/master/OverviewIOModule.png)
 
 The project is based on WPF using C#.
 
