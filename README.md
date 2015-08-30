@@ -9,7 +9,7 @@ Originally developed as Arduino logic simulator, it works as a client/server app
 
 The code behind is modular enough for additional external libraries to control real devices, instruments or any gadgets from your personal projects.
 
-A quick overview of how we control the input module is shown below.
+A quick overview of how we can control the input module is shown below.
 
 ![](https://github.com/EdoLabWorks/xedo-imgs/blob/master/IOModuleOverview.png)
 
