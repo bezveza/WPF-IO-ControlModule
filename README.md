@@ -10,5 +10,4 @@ The code behind is modular enough for additional external libraries to control r
 
 The project is based on WPF using C#.
 
-Check the link here for some details.
-https://github.com/EdoLabWorks/IO-ControlModule/wiki
+
