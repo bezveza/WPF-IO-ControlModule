@@ -9,9 +9,7 @@ Originally developed as Arduino logic simulator, it works as a client/server app
 
 The code behind is modular enough for additional external libraries to control real devices, instruments or any gadgets from your personal projects.
 
-A quick overview of how we can control the input module is shown below.
-
-![](https://github.com/EdoLabWorks/xedo-imgs/blob/master/OverviewIOModule.png)
+[](https://github.com/EdoLabWorks/xedo-imgs/blob/master/OverviewIOModule.png)
 
 The project is based on WPF using C#.
 
