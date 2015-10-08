@@ -9,6 +9,9 @@ The code behind is modular enough for additional external libraries to control r
 
 [](https://github.com/EdoLabWorks/xedo-imgs/blob/master/OverviewIOModule.png)
 
+--
+If we turn off one of the conceptual device's LED using the front panel button, it will automatically generate and send an event signal to our WebControl interface as a real-time notification of the changed state from a particular device in the I/O ControlModule.     
+
 The project is based on WPF using C#.
 
 
