@@ -11,6 +11,6 @@ The code behind is modular enough for additional external libraries to control r
 
 Turning off manually one of the LED's will automatically send an event signal to the WebControl interface as a real-time notification of the unexpected changed state from ON to OFF.     
 
-The project is based on WPF using C#.
+This project is based on WPF using C#.
 
 
