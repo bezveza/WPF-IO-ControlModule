@@ -6,7 +6,8 @@ A simple simulator which can be used as a logic exerciser, I/O control sequencer
 ![](https://github.com/EdoLabWorks/xedo-imgs/blob/master/BlueIOModule.png)
 
 The code behind is modular enough for additional external libraries to control real devices, instruments or any gadgets from your personal projects.
-To start off, you can start/close, control any processes in your computer using your mobile device.
+
+To start off, you can start/close, control any running processes in your computer using your mobile device.
 
 [](https://github.com/EdoLabWorks/xedo-imgs/blob/master/OverviewIOModule.png)
 
