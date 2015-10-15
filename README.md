@@ -11,7 +11,7 @@ To start off, you can start/close, control any running processes in your compute
 
 [](https://github.com/EdoLabWorks/xedo-imgs/blob/master/OverviewIOModule.png)
 
-Turning off manually one of the LED's will automatically send an event signal to the WebControl interface as a real-time notification of the unexpected changed state from ON to OFF.     
+Turning off manually one of the LED's will automatically send an event signal to the WebControl interface as a real-time notification of the unexpected changed state from ON to OFF condition.     
 
 This project is based on WPF using C#.
 
