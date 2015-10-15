@@ -5,7 +5,7 @@ A simple simulator which can be used as a logic exerciser, I/O control sequencer
 
 ![](https://github.com/EdoLabWorks/xedo-imgs/blob/master/BlueIOModule.png)
 
-The code behind is modular enough for additional external libraries to control real devices, wireless I/O mudules, instruments for industrial applications. You can also easily customize it or port it to other low level languages to work with any gadgets from your personal projects.
+The code behind is modular enough for additional external libraries to control real devices, wireless I/O modules, or instruments for industrial applications. You can also easily customize it or port it to other low level languages to work with any gadgets from your personal projects.
 
 To start off, you can start/close, control any running processes in your computer using your mobile device.
 
