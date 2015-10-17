@@ -11,9 +11,9 @@ You can start, control and close any processes in your computer using your mobil
 
 [](https://github.com/EdoLabWorks/xedo-imgs/blob/master/OverviewIOModule.png)
 
-Turning off manually one of the LED's/device modules will send a real-time notification to the Web Control interface. You can also customize it for any event you wish to trigger a notification.  
+Turning off manually one of the LED's/device modules will send a real-time notification to the web control interface. You can also customize it for any event you wish to trigger a notification.  
 
-You can use MySQL or MongoDB for event logging which you can view and download from the Web Control interface.
+You can use MySQL or MongoDB for event logging which can be viewed and downloaded from the web control interface.
 
 This project is based on WPF using C#.
 
