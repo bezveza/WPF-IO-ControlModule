@@ -1,17 +1,17 @@
 # Digital-IO-Control-Module
 
 
-A simple simulator which can be used as a logic exerciser, I/O control sequencer, visual indicator or command center for remote control, monitoring, debug tool for test automation and others.
+A simple lightweight simulator which can be used as a logic exerciser, I/O sequencer, remote control, debug tool for test automation and others.
 
 ![](https://github.com/EdoLabWorks/xedo-imgs/blob/master/BlueIOModule.png)
 
-The code behind is modular enough for additional external libraries to control real devices, wireless I/O modules, or instruments for industrial applications. You can also easily customize it or port it to other low level languages to work with any gadgets from your personal projects.
+The code behind is modular enough for additional external libraries to be added to control real devices, wireless I/O modules, or machine/instruments for industrial applications. You can also easily customize or port it to other languages to interface with any gadgets from your personal projects.
 
-You can start/close or control any processes in your computer using your mobile device.
+You can start, control and close any processes in your computer using your mobile device.
 
 [](https://github.com/EdoLabWorks/xedo-imgs/blob/master/OverviewIOModule.png)
 
-Turning off manually one of the LED's will automatically send an event signal to the WebControl interface as a real-time notification of the unexpected changed state from ON to OFF condition.     
+Turning off manually one of the LED's/device modules will send a real-time notification of the unexpected state change from ON to OFF condition. You can also customize it for any event you wish to trigger a notification.     
 
 This project is based on WPF using C#.
 
