@@ -1,7 +1,7 @@
 # Digital-IO-Control-Module
 
 
-A simple lightweight simulator which can be used as a logic exerciser, I/O sequencer, remote monitoring and control for M2M solution, debug tool for test automation and others.
+A simple lightweight simulator which can be used as a logic exerciser, I/O sequencer, remote monitoring and control for M2M solutions, debug tool for test automation and others.
 
 [](https://github.com/EdoLabWorks/xedo-imgs/blob/master/BlueIOModule.png)
 ![](https://github.com/EdoLabWorks/ximgs/blob/master/newIOmodule.png)
