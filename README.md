@@ -3,7 +3,8 @@
 
 A simple lightweight simulator which can be used as a logic exerciser, I/O sequencer, remote control command center, debug tool for test automation and others.
 
-![](https://github.com/EdoLabWorks/xedo-imgs/blob/master/BlueIOModule.png)
+[](https://github.com/EdoLabWorks/xedo-imgs/blob/master/BlueIOModule.png)
+![](https://github.com/EdoLabWorks/ximgs/blob/master/newIOmodule.png)
 
 The code behind is modular enough for additional external libraries to be added to control real devices such as wireless I/O modules, or machine/instruments for industrial applications. You can also easily customize or port it to other languages to interface with any gadgets from your personal projects.
 
