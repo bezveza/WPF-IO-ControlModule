@@ -12,7 +12,7 @@ Start, control and close any processes in your computer using your mobile device
 
 [](https://github.com/EdoLabWorks/xedo-imgs/blob/master/OverviewIOModule.png)
 
-You can configure it and create any event you want to trigger a realtime notification to the web control interface.  
+Easily configure it to create any event you want to trigger a realtime notification to the web control interface.  
 
 Use MySQL or MongoDB for event logging which can be viewed from the web control interface.
 
