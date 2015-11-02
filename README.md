@@ -10,13 +10,12 @@ Add additional external libraries to control real devices such as wireless I/O m
 
 Start, control and close any processes in your computer using your mobile device.
 
+![](https://github.com/EdoLabWorks/ximgs/blob/master/canvas.png)
 [](https://github.com/EdoLabWorks/xedo-imgs/blob/master/OverviewIOModule.png)
 
 Easily create any event that will trigger a real-time notification with the web control interface.  
 
 Use MySQL or MongoDB for event logging viewable from the web control interface.
-
-![](https://github.com/EdoLabWorks/ximgs/blob/master/canvas.png)
 
 This project is based on WPF using C#.
 
