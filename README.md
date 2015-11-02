@@ -16,6 +16,8 @@ Easily create any event that will trigger a real-time notification with the web 
 
 Use MySQL or MongoDB for event logging viewable from the web control interface.
 
+![](https://github.com/EdoLabWorks/ximgs/blob/master/canvas.png)
+
 This project is based on WPF using C#.
 
 
