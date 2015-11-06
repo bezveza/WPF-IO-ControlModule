@@ -8,7 +8,7 @@ A simple lightweight simulator which can be used as a logic exerciser, I/O seque
 
 Add additional external libraries to control real devices such as wireless I/O modules or machine/instruments for industrial applications. You can customize it to interface with any gadgets from your personal projects.
 
-Start, control and close any processes in your computer using your mobile device.
+Start, control and close any process in your computer using your mobile device.
 
 ![](https://github.com/EdoLabWorks/ximgs/blob/master/canvas.png)
 [](https://github.com/EdoLabWorks/xedo-imgs/blob/master/OverviewIOModule.png)
